@@ -1,0 +1,6 @@
+rootProject.name = 'lifesub'
+
+include 'common'
+include 'member'
+include 'mysub'
+include 'recommend'

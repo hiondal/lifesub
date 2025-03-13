@@ -1,0 +1,22 @@
+package com.unicorn.lifesub.mysub.infra.dto;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+/**
+ * 구독 응답 DTO 클래스입니다.
+ */
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Schema(description = "구독 응답")
+public class SubscribeResponse {
+
+    @Schema(description = "성공 여부", example = "true")
+    private boolean success;
+
+    @Schema(description = "메시지", example = "구독이 완료되었습니다.")
+    private String message;
+}

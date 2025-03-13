@@ -1,0 +1,6 @@
+dependencies {
+    implementation project(':common')
+}
+bootJar {
+    archiveFileName = "recommend.jar"
+}

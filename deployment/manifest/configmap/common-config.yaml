@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: common-config
+data:
+  SERVER_PORT: "8080"
+  ALLOWED_ORIGINS: "http://localhost:3000,http://4.230.147.248"
+  JPA_SHOW_SQL: "true"
+  JPA_DDL_AUTO: "update"
+  LOG_LEVEL: "DEBUG"
