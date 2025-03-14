@@ -1,3 +1,13 @@
+
+# 빌드된 JAR 파일 무시
+*.jar
+*/build/libs/*.jar
+**/build/libs/*.jar
+member/build/libs/
+mysub/build/libs/
+recommend/build/libs/
+common/build/libs/
+
 # Gradle 관련
 .gradle/
 build/
