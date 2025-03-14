@@ -18,9 +18,9 @@ public class CategoryEntity {
     private String categoryName;
 
     @Builder
-    public CategoryEntity(String categoryId, String name) {
+    public CategoryEntity(String categoryId, String categoryName) {
         this.categoryId = categoryId;
-        this.categoryName = name;
+        this.categoryName = categoryName;
     }
 
     public Category toDomain() {

@@ -41,27 +41,27 @@ public class DataLoader implements CommandLineRunner {
         List<CategoryEntity> categories = Arrays.asList(
                 CategoryEntity.builder()
                         .categoryId("OTT")
-                        .name("OTT/동영상")
+                        .categoryName("OTT/동영상")
                         .build(),
                 CategoryEntity.builder()
                         .categoryId("MUSIC")
-                        .name("음악")
+                        .categoryName("음악")
                         .build(),
                 CategoryEntity.builder()
                         .categoryId("FOOD")
-                        .name("식품")
+                        .categoryName("식품")
                         .build(),
                 CategoryEntity.builder()
                         .categoryId("LIFE")
-                        .name("생활")
+                        .categoryName("생활")
                         .build(),
                 CategoryEntity.builder()
                         .categoryId("BEAUTY")
-                        .name("뷰티")
+                        .categoryName("뷰티")
                         .build(),
                 CategoryEntity.builder()
                         .categoryId("EDU")
-                        .name("교육")
+                        .categoryName("교육")
                         .build()
         );
 

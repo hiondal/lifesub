@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/lifesub.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/lifesub.common.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/member/lifesub.member.main.iml" filepath="$PROJECT_DIR$/.idea/modules/member/lifesub.member.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mysub/lifesub.mysub.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mysub/lifesub.mysub.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mysub/lifesub.mysub.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mysub/lifesub.mysub.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/recommend/lifesub.recommend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/recommend/lifesub.recommend.main.iml" />
     </modules>
   </component>

@@ -8,9 +8,13 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.36/5a30490a6e14977d97d9c73c924c1f1b5311ea95/lombok-1.18.36.jar" />
         </processorPath>
-        <module name="lifesub.mysub.main" />
-        <module name="lifesub.recommend.main" />
+        <module name="lifesub.recommend.test" />
         <module name="lifesub.common.main" />
+        <module name="lifesub.mysub.main" />
+        <module name="lifesub.common.test" />
+        <module name="lifesub.member.test" />
+        <module name="lifesub.mysub.test" />
+        <module name="lifesub.recommend.main" />
         <module name="lifesub.member.main" />
       </profile>
     </annotationProcessing>
