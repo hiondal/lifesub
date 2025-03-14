@@ -21,6 +21,7 @@ hs_err_pid*
 
 # Gradle
 .gradle/
+gradle/
 common/build/
 member/build/
 mysub/build/
