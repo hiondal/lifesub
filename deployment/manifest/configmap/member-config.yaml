@@ -3,6 +3,9 @@ kind: ConfigMap
 metadata:
   name: member-config
 data:
-  POSTGRES_HOST: "postgres-member"
+  SERVER_PORT: "8080"
+  POSTGRES_HOST: "postgres-member-postgresql-primary"
   POSTGRES_PORT: "5432"
   POSTGRES_DB: "memberdb"
+  JWT_ACCESS_TOKEN_VALIDITY: "3600"
+  JWT_REFRESH_TOKEN_VALIDITY: "86400"

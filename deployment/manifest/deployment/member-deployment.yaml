@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: member
+  name: member-deployment
   labels:
     app: member
 spec:
@@ -20,16 +20,6 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        resources:
-          requests:
-            cpu: 256m
-            memory: 256Mi
-          limits:
-            cpu: 1024m
-            memory: 1024Mi
-        env:
-        - name: SPRING_PROFILES_ACTIVE
-          value: "prod"
         envFrom:
         - configMapRef:
             name: common-config
@@ -39,27 +29,29 @@ spec:
             name: common-secret
         - secretRef:
             name: member-secret
+        resources:
+          requests:
+            cpu: 256m
+            memory: 256Mi
+          limits:
+            cpu: 1024m
+            memory: 1024Mi
         startupProbe:
-          httpGet:
-            path: /actuator/health
-            port: 8080
-          initialDelaySeconds: 60
-          periodSeconds: 10
-          timeoutSeconds: 5
-          failureThreshold: 30
-        readinessProbe:
           httpGet:
             path: /actuator/health
             port: 8080
           initialDelaySeconds: 30
           periodSeconds: 10
-          timeoutSeconds: 5
-          failureThreshold: 3
+          failureThreshold: 30
         livenessProbe:
           httpGet:
             path: /actuator/health
             port: 8080
-          initialDelaySeconds: 60
-          periodSeconds: 20
-          timeoutSeconds: 10
+          periodSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          periodSeconds: 10
           failureThreshold: 3

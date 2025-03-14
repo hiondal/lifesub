@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recommend-deployment
+  labels:
+    app: recommend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: recommend
+  template:
+    metadata:
+      labels:
+        app: recommend
+    spec:
+      containers:
+      - name: recommend
+        image: unicorncr.azurecr.io/lifesub/recommend:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8082
+        envFrom:
+        - configMapRef:
+            name: common-config
+        - configMapRef:
+            name: recommend-config
+        - secretRef:
+            name: common-secret
+        - secretRef:
+            name: recommend-secret
+        resources:
+          requests:
+            cpu: 256m
+            memory: 256Mi
+          limits:
+            cpu: 1024m
+            memory: 1024Mi
+        startupProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8082
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 30
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8082
+          periodSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8082
+          periodSeconds: 10
+          failureThreshold: 3
