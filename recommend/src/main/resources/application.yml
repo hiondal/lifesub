@@ -7,9 +7,9 @@ spring:
   application:
     name: recommend-service
   datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:recommenddb}
+    url: jdbc:postgresql://${POSTGRES_HOST:4.230.149.97}:${POSTGRES_PORT:5432}/${POSTGRES_DB:recommenddb}
     username: ${POSTGRES_USER:postgres}
-    password: ${POSTGRES_PASSWORD:postgres}
+    password: ${POSTGRES_PASSWORD:Passw0rd}
   jpa:
     hibernate:
       ddl-auto: ${JPA_DDL_AUTO:update}

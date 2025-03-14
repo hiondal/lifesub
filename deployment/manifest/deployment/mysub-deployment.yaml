@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysub-deployment
+  labels:
+    app: mysub
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysub
+  template:
+    metadata:
+      labels:
+        app: mysub
+    spec:
+      containers:
+      - name: mysub
+        image: unicorncr.azurecr.io/lifesub/mysub:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8081
+        envFrom:
+        - configMapRef:
+            name: common-config
+        - configMapRef:
+            name: mysub-config
+        - secretRef:
+            name: common-secret
+        - secretRef:
+            name: mysub-secret
+        resources:
+          requests:
+            cpu: 256m
+            memory: 256Mi
+          limits:
+            cpu: 1024m
+            memory: 1024Mi
+        startupProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8081
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 30
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8081
+          periodSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8081
+          periodSeconds: 10
+          failureThreshold: 3

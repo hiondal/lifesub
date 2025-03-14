@@ -7,9 +7,9 @@ spring:
   application:
     name: member-service
   datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:memberdb}
+    url: jdbc:postgresql://${POSTGRES_HOST:20.249.196.149}:${POSTGRES_PORT:5432}/${POSTGRES_DB:memberdb}
     username: ${POSTGRES_USER:postgres}
-    password: ${POSTGRES_PASSWORD:postgres}
+    password: ${POSTGRES_PASSWORD:Passw0rd}
   jpa:
     hibernate:
       ddl-auto: ${JPA_DDL_AUTO:update}
@@ -20,7 +20,7 @@ spring:
         format_sql: true
 
 jwt:
-  secret-key: ${JWT_SECRET_KEY:defaultSecretKey}
+  secret-key: ${JWT_SECRET_KEY:defaultSecretKey}  #환경변수 지정:JWT_SECRET_KEY=OESOViD6BVbgRJfWIQS3olZ1jV/FCB4NCqH5Qkfz1oI=
   access-token-validity: ${JWT_ACCESS_TOKEN_VALIDITY:3600}
   refresh-token-validity: ${JWT_REFRESH_TOKEN_VALIDITY:86400}
 

@@ -7,9 +7,9 @@ spring:
   application:
     name: member-service
   datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:memberdb}
+    url: jdbc:postgresql://${POSTGRES_HOST:20.249.196.149}:${POSTGRES_PORT:5432}/${POSTGRES_DB:memberdb}
     username: ${POSTGRES_USER:postgres}
-    password: ${POSTGRES_PASSWORD:postgres}
+    password: ${POSTGRES_PASSWORD:Passw0rd}
   jpa:
     hibernate:
       ddl-auto: ${JPA_DDL_AUTO:update}

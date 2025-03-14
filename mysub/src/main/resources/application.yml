@@ -7,9 +7,9 @@ spring:
   application:
     name: mysub-service
   datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:mysubdb}
+    url: jdbc:postgresql://${POSTGRES_HOST:4.230.147.248}:${POSTGRES_PORT:5432}/${POSTGRES_DB:mysubdb}
     username: ${POSTGRES_USER:postgres}
-    password: ${POSTGRES_PASSWORD:postgres}
+    password: ${POSTGRES_PASSWORD:Passw0rd}
   jpa:
     hibernate:
       ddl-auto: ${JPA_DDL_AUTO:update}
