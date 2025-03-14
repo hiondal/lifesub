@@ -4,6 +4,6 @@ metadata:
   name: recommend-config
 data:
   SERVER_PORT: "8082"
-  POSTGRES_HOST: "postgres-recommend-postgresql-primary"
+  POSTGRES_HOST: "postgres-recommend-postgresql"
   POSTGRES_PORT: "5432"
   POSTGRES_DB: "recommenddb"

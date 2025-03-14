@@ -4,7 +4,7 @@ metadata:
   name: mysub-config
 data:
   SERVER_PORT: "8081"
-  POSTGRES_HOST: "postgres-mysub-postgresql-primary"
+  POSTGRES_HOST: "postgres-mysub-postgresql"
   POSTGRES_PORT: "5432"
   POSTGRES_DB: "mysubdb"
   RECOMMEND_SERVICE_URL: "http://recommend-service:8082"
